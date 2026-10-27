@@ -27,3 +27,35 @@ document.querySelectorAll('.needs-validation').forEach((form) => {
     form.classList.remove('was-validated');
   });
 });
+
+// Окно подтверждения возраста 18+.
+// Ответ запоминается до закрытия вкладки (sessionStorage).
+const ageModalElement = document.getElementById('ageModal');
+
+if (ageModalElement) {
+  const ageModal = new bootstrap.Modal(ageModalElement);
+  let ageConfirmed = false;
+
+  try {
+    ageConfirmed = sessionStorage.getItem('ageConfirmed') === 'yes';
+  } catch (error) {
+    ageConfirmed = false;
+  }
+
+  if (!ageConfirmed) {
+    ageModal.show();
+  }
+
+  document.getElementById('age-yes').addEventListener('click', () => {
+    try {
+      sessionStorage.setItem('ageConfirmed', 'yes');
+    } catch (error) {
+      // Если хранилище недоступно, окно просто появится снова на следующей странице.
+    }
+    ageModal.hide();
+  });
+
+  document.getElementById('age-no').addEventListener('click', () => {
+    document.getElementById('age-denied').classList.remove('d-none');
+  });
+}

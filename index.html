@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Главная — Bootstrap Shop</title>
+  <title>Главная — Градус</title>
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -15,9 +15,9 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-12 col-md-8">
-          <h1 class="h3 mb-1">Bootstrap Shop</h1>
+          <h1 class="h3 mb-1">Градус</h1>
           <p class="mb-0 opacity-75">
-            Учебный интернет-магазин на Bootstrap
+            Учебный алкомаркет: крепкие напитки, пиво и закуски
           </p>
         </div>
         <div class="col-12 col-md-4 text-md-end mt-3 mt-md-0">
@@ -31,7 +31,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Bootstrap Shop</a>
+      <a class="navbar-brand fw-bold" href="index.html">Градус <span class="badge bg-danger align-middle">18+</span></a>
       <button
         class="navbar-toggler"
         type="button"
@@ -84,53 +84,49 @@
       <div class="row align-items-center g-4">
         <div class="col-12 col-lg-6">
           <h2 class="display-5 fw-bold">
-            Учебный каталог товаров на Bootstrap
+            Напитки для любого повода
           </h2>
           <p class="lead text-muted">
-            Проект демонстрирует использование Bootstrap-сетки,
-            адаптивных колонок и базовых utility-классов.
+            От лёгкого светлого пива до текилы из голубой агавы —
+            подберём напиток и подскажем, с чем его подавать.
           </p>
           <a class="btn btn-primary btn-lg" href="catalog.html">
             Перейти в каталог
           </a>
         </div>
         <div class="col-12 col-lg-6">
-          <div class="placeholder-box p-5 bg-light border rounded text-center d-flex align-items-center justify-content-center">
-            <p class="mb-0 text-muted">
-              Здесь может быть изображение, баннер или промо-блок.
-            </p>
-          </div>
+          <img class="hero-image img-fluid w-100 rounded shadow-sm" src="images/tequila.jpeg" alt="Рюмка текилы с лаймом и солью" width="547" height="365">
         </div>
       </div>
     </section>
 
     <section class="container my-5">
-      <h2 class="text-center mb-4">Преимущества проекта</h2>
+      <h2 class="text-center mb-4">Почему «Градус»</h2>
 
       <div class="row g-4">
         <div class="col-12 col-md-4">
           <div class="p-4 border rounded h-100 bg-white">
-            <h3 class="h5">Bootstrap-сетка</h3>
+            <h3 class="h5">Проверенные поставщики</h3>
             <p class="mb-0 text-muted">
-              Страница построена на 12-колоночной системе Bootstrap.
+              Работаем напрямую с производителями и дистрибьюторами.
             </p>
           </div>
         </div>
 
         <div class="col-12 col-md-4">
           <div class="p-4 border rounded h-100 bg-white">
-            <h3 class="h5">Адаптивность</h3>
+            <h3 class="h5">Подскажем закуску</h3>
             <p class="mb-0 text-muted">
-              Колонки меняют ширину в зависимости от размера экрана.
+              К каждому напитку на странице товара есть рекомендации по подаче.
             </p>
           </div>
         </div>
 
         <div class="col-12 col-md-4">
           <div class="p-4 border rounded h-100 bg-white">
-            <h3 class="h5">Готовая база</h3>
+            <h3 class="h5">Строго 18+</h3>
             <p class="mb-0 text-muted">
-              Проект подготовлен к добавлению карточек, форм и модальных окон.
+              Продажа только совершеннолетним — возраст подтверждается при входе на сайт.
             </p>
           </div>
         </div>
@@ -148,13 +144,14 @@
       <div class="row g-4">
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card h-100 shadow-sm">
+            <img class="card-img-top" src="images/tequila.jpeg" alt="Текила Бланко">
             <div class="card-body d-flex flex-column">
               <span class="badge bg-success mb-3 align-self-start">Новинка</span>
-              <h3 class="card-title h5">Товар 1</h3>
+              <h3 class="card-title h5">Текила Бланко</h3>
               <p class="card-text text-muted">
-                Краткое описание учебного товара.
+                Мексиканская текила из голубой агавы. Подаётся с солью и лаймом.
               </p>
-              <p class="fw-bold mt-auto mb-3">1000 руб.</p>
+              <p class="fw-bold mt-auto mb-3">2490 руб.</p>
               <a class="btn btn-primary align-self-start" href="product.html">
                 Подробнее
               </a>
@@ -164,13 +161,14 @@
 
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card h-100 shadow-sm">
+            <img class="card-img-top" src="images/vodka.jpeg" alt="Водка классическая">
             <div class="card-body d-flex flex-column">
               <span class="badge bg-warning text-dark mb-3 align-self-start">Хит</span>
-              <h3 class="card-title h5">Товар 2</h3>
+              <h3 class="card-title h5">Водка классическая</h3>
               <p class="card-text text-muted">
-                Краткое описание учебного товара.
+                Мягкая водка тройной очистки — классика к русскому столу и красной икре.
               </p>
-              <p class="fw-bold mt-auto mb-3">1500 руб.</p>
+              <p class="fw-bold mt-auto mb-3">690 руб.</p>
               <a class="btn btn-primary align-self-start" href="product.html">
                 Подробнее
               </a>
@@ -180,13 +178,14 @@
 
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card h-100 shadow-sm">
+            <img class="card-img-top" src="images/beer.jpeg" alt="Пиво светлое">
             <div class="card-body d-flex flex-column">
               <span class="badge bg-danger mb-3 align-self-start">Скидка</span>
-              <h3 class="card-title h5">Товар 3</h3>
+              <h3 class="card-title h5">Пиво светлое</h3>
               <p class="card-text text-muted">
-                Краткое описание учебного товара.
+                Лёгкое фильтрованное пиво с мягкой горчинкой. Отлично к рыбе и закускам.
               </p>
-              <p class="fw-bold mt-auto mb-3">2000 руб.</p>
+              <p class="fw-bold mt-auto mb-3">119 руб. <del class="text-muted fs-6 fw-normal">149 руб.</del></p>
               <a class="btn btn-primary align-self-start" href="product.html">
                 Подробнее
               </a>
@@ -201,8 +200,11 @@
     <div class="container">
       <div class="row align-items-center g-3">
         <div class="col-12 col-md-6">
-          <p class="mb-0">
-            &copy; 2026 Bootstrap Shop. Учебный проект.
+          <p class="mb-1">
+            &copy; 2026 Градус. Учебный проект.
+          </p>
+          <p class="mb-0 small text-white-50">
+            Чрезмерное употребление алкоголя вредит вашему здоровью.
           </p>
         </div>
         <div class="col-12 col-md-6 text-md-end">
@@ -217,6 +219,38 @@
     </div>
   </footer>
 
+  <div
+    class="modal fade"
+    id="ageModal"
+    tabindex="-1"
+    aria-labelledby="ageModalLabel"
+    aria-hidden="true"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center">
+        <div class="modal-header justify-content-center border-0">
+          <h2 class="modal-title h4" id="ageModalLabel">Вам уже есть 18 лет?</h2>
+        </div>
+        <div class="modal-body">
+          <p class="mb-0 text-muted">
+            Сайт содержит информацию об алкогольной продукции
+            и предназначен только для совершеннолетних.
+          </p>
+          <div class="alert alert-danger d-none mt-3 mb-0" id="age-denied" role="alert">
+            К сожалению, сайт доступен только лицам старше 18 лет.
+          </div>
+        </div>
+        <div class="modal-footer justify-content-center border-0">
+          <button type="button" class="btn btn-outline-secondary" id="age-no">Нет</button>
+          <button type="button" class="btn btn-primary" id="age-yes">Да, мне есть 18</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

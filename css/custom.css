@@ -4,18 +4,20 @@ body {
   min-height: 100vh;
 }
 
-/* Временный блок вместо изображения в hero-блоке */
-.placeholder-box {
-  min-height: 240px;
+/* Фото в первом экране главной страницы */
+.hero-image {
+  max-height: 360px;
+  object-fit: cover;
 }
 
-/* Временный блок вместо изображения на странице товара */
-.placeholder-image {
-  min-height: 320px;
-}
-
-/* Одинаковая высота изображений в карточках каталога */
+/* Одинаковая высота фотографий в карточках товаров */
 .card-img-top {
-  height: 180px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Фото на странице товара */
+.product-photo {
+  max-height: 420px;
   object-fit: cover;
 }
