@@ -1,1 +1,10 @@
 /* Собственные стили проекта поверх Bootstrap */
+
+body {
+  min-height: 100vh;
+}
+
+/* Временный блок вместо изображения в hero-блоке */
+.placeholder-box {
+  min-height: 240px;
+}
