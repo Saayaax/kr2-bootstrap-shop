@@ -1,22 +1,41 @@
-/* Собственные стили проекта поверх Bootstrap */
-
 body {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
+  background-color: #f6b21a;
 }
 
-/* Фото в первом экране главной страницы */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: url("../images/beer-bg.jpg");
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body > footer {
+  margin-top: auto !important;
+}
+
+.page-content {
+  background-color: rgba(255, 255, 255, 0.94);
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
+}
+
 .hero-image {
   max-height: 360px;
   object-fit: cover;
 }
 
-/* Одинаковая высота фотографий в карточках товаров */
 .card-img-top {
   height: 200px;
   object-fit: cover;
 }
 
-/* Фото на странице товара */
 .product-photo {
   max-height: 420px;
   object-fit: cover;
