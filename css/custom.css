@@ -8,3 +8,14 @@ body {
 .placeholder-box {
   min-height: 240px;
 }
+
+/* Временный блок вместо изображения на странице товара */
+.placeholder-image {
+  min-height: 320px;
+}
+
+/* Одинаковая высота изображений в карточках каталога */
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
