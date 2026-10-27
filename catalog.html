@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Каталог — Bootstrap Shop</title>
+  <title>Каталог — Градус</title>
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -13,7 +13,7 @@
 <body class="bg-light">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Bootstrap Shop</a>
+      <a class="navbar-brand fw-bold" href="index.html">Градус <span class="badge bg-danger align-middle">18+</span></a>
       <button
         class="navbar-toggler"
         type="button"
@@ -62,13 +62,18 @@
   </nav>
 
   <main class="container my-5">
+    <div class="alert alert-success alert-dismissible d-none" id="modal-success" role="alert">
+      Заявка отправлена! Менеджер свяжется с вами в ближайшее время.
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть"></button>
+    </div>
+
     <div class="alert alert-info" role="alert">
-      Выберите товар из каталога. Карточки товаров оформлены с помощью
-      компонента Bootstrap <code>card</code>.
+      Выберите напиток из каталога. Нажмите «Заказать», чтобы оставить
+      быструю заявку, или «Подробнее», чтобы посмотреть характеристики.
     </div>
 
     <div class="d-flex justify-content-between align-items-center mb-4">
-      <h1 class="h2 mb-0">Каталог товаров</h1>
+      <h1 class="h2 mb-0">Каталог напитков</h1>
       <a class="btn btn-outline-primary" href="order.html">
         Оставить заявку
       </a>
@@ -77,16 +82,16 @@
     <div class="row g-4">
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card h-100 shadow-sm">
-            <img class="card-img-top" src="images/product-1.svg" alt="Изображение товара 1">
+            <img class="card-img-top" src="images/tequila.jpeg" alt="Текила Бланко">
             <div class="card-body d-flex flex-column">
               <div class="d-flex justify-content-between align-items-start mb-3">
-                <h2 class="card-title h5">Товар 1</h2>
+                <h2 class="card-title h5">Текила Бланко</h2>
                 <span class="badge bg-success">Новинка</span>
               </div>
               <p class="card-text text-muted">
-                Краткое описание учебного товара для каталога.
+                Мексиканская текила из голубой агавы. Подаётся с солью и лаймом.
               </p>
-              <p class="fw-bold fs-5 mt-auto">1000 руб.</p>
+              <p class="fw-bold fs-5 mt-auto">2490 руб.</p>
               <div class="d-flex gap-2">
                 <a class="btn btn-primary" href="product.html">Подробнее</a>
                 <button
@@ -104,16 +109,16 @@
 
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card h-100 shadow-sm">
-            <img class="card-img-top" src="images/product-2.svg" alt="Изображение товара 2">
+            <img class="card-img-top" src="images/vodka.jpeg" alt="Водка классическая">
             <div class="card-body d-flex flex-column">
               <div class="d-flex justify-content-between align-items-start mb-3">
-                <h2 class="card-title h5">Товар 2</h2>
+                <h2 class="card-title h5">Водка классическая</h2>
                 <span class="badge bg-warning text-dark">Хит</span>
               </div>
               <p class="card-text text-muted">
-                Краткое описание второго учебного товара.
+                Мягкая водка тройной очистки — классика к русскому столу и красной икре.
               </p>
-              <p class="fw-bold fs-5 mt-auto">1500 руб.</p>
+              <p class="fw-bold fs-5 mt-auto">690 руб.</p>
               <div class="d-flex gap-2">
                 <a class="btn btn-primary" href="product.html">Подробнее</a>
                 <button
@@ -131,16 +136,16 @@
 
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card h-100 shadow-sm">
-            <img class="card-img-top" src="images/product-3.svg" alt="Изображение товара 3">
+            <img class="card-img-top" src="images/beer.jpeg" alt="Пиво светлое">
             <div class="card-body d-flex flex-column">
               <div class="d-flex justify-content-between align-items-start mb-3">
-                <h2 class="card-title h5">Товар 3</h2>
+                <h2 class="card-title h5">Пиво светлое</h2>
                 <span class="badge bg-danger">Скидка</span>
               </div>
               <p class="card-text text-muted">
-                Краткое описание третьего учебного товара.
+                Лёгкое фильтрованное пиво с мягкой горчинкой. Отлично к рыбе и закускам.
               </p>
-              <p class="fw-bold fs-5 mt-auto">2000 руб.</p>
+              <p class="fw-bold fs-5 mt-auto">119 руб. <del class="text-muted fs-6 fw-normal">149 руб.</del></p>
               <div class="d-flex gap-2">
                 <a class="btn btn-primary" href="product.html">Подробнее</a>
                 <button
@@ -162,8 +167,11 @@
     <div class="container">
       <div class="row align-items-center g-3">
         <div class="col-12 col-md-6">
-          <p class="mb-0">
-            &copy; 2026 Bootstrap Shop. Учебный проект.
+          <p class="mb-1">
+            &copy; 2026 Градус. Учебный проект.
+          </p>
+          <p class="mb-0 small text-white-50">
+            Чрезмерное употребление алкоголя вредит вашему здоровью.
           </p>
         </div>
         <div class="col-12 col-md-6 text-md-end">
@@ -204,15 +212,20 @@
             Оставьте контактные данные, и менеджер свяжется с вами.
           </p>
 
-          <form>
+          <form id="modal-form" class="needs-validation" data-success="modal-success" novalidate>
             <div class="mb-3">
               <label for="modal-name" class="form-label">Имя</label>
-              <input id="modal-name" name="name" type="text" class="form-control" required>
+              <input id="modal-name" name="name" type="text" class="form-control" minlength="2" required>
+              <div class="invalid-feedback">Введите имя (минимум 2 символа).</div>
             </div>
 
             <div class="mb-3">
               <label for="modal-phone" class="form-label">Телефон</label>
-              <input id="modal-phone" name="phone" type="tel" class="form-control" required>
+              <div class="input-group has-validation">
+                <span class="input-group-text">+7</span>
+                <input id="modal-phone" name="phone" type="tel" class="form-control" placeholder="9000000000" pattern="[0-9]{10}" required>
+                <div class="invalid-feedback">Введите 10 цифр номера без пробелов.</div>
+              </div>
             </div>
 
             <div class="form-check mb-3">
@@ -220,6 +233,7 @@
               <label class="form-check-label" for="modal-agree">
                 Согласен на обработку данных
               </label>
+              <div class="invalid-feedback">Нужно согласие на обработку данных.</div>
             </div>
           </form>
         </div>
@@ -228,7 +242,7 @@
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
             Закрыть
           </button>
-          <button type="button" class="btn btn-primary">
+          <button type="submit" class="btn btn-primary" form="modal-form">
             Отправить
           </button>
         </div>
@@ -236,6 +250,38 @@
     </div>
   </div>
 
+  <div
+    class="modal fade"
+    id="ageModal"
+    tabindex="-1"
+    aria-labelledby="ageModalLabel"
+    aria-hidden="true"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center">
+        <div class="modal-header justify-content-center border-0">
+          <h2 class="modal-title h4" id="ageModalLabel">Вам уже есть 18 лет?</h2>
+        </div>
+        <div class="modal-body">
+          <p class="mb-0 text-muted">
+            Сайт содержит информацию об алкогольной продукции
+            и предназначен только для совершеннолетних.
+          </p>
+          <div class="alert alert-danger d-none mt-3 mb-0" id="age-denied" role="alert">
+            К сожалению, сайт доступен только лицам старше 18 лет.
+          </div>
+        </div>
+        <div class="modal-footer justify-content-center border-0">
+          <button type="button" class="btn btn-outline-secondary" id="age-no">Нет</button>
+          <button type="button" class="btn btn-primary" id="age-yes">Да, мне есть 18</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
