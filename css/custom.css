@@ -1,22 +1,17 @@
-/* Собственные стили проекта поверх Bootstrap */
-
 body {
   min-height: 100vh;
 }
 
-/* Фото в первом экране главной страницы */
 .hero-image {
   max-height: 360px;
   object-fit: cover;
 }
 
-/* Одинаковая высота фотографий в карточках товаров */
 .card-img-top {
   height: 200px;
   object-fit: cover;
 }
 
-/* Фото на странице товара */
 .product-photo {
   max-height: 420px;
   object-fit: cover;

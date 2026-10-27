@@ -1,5 +1,3 @@
-// Проверка форм средствами Bootstrap: класс was-validated подсвечивает поля
-// зелёным или красным, а при успешной проверке показывается сообщение alert.
 document.querySelectorAll('.needs-validation').forEach((form) => {
   form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -16,7 +14,6 @@ document.querySelectorAll('.needs-validation').forEach((form) => {
     form.reset();
     successAlert.classList.remove('d-none');
 
-    // Если форма находится в модальном окне — закрываем его.
     const modalElement = form.closest('.modal');
     if (modalElement) {
       bootstrap.Modal.getOrCreateInstance(modalElement).hide();
@@ -28,8 +25,6 @@ document.querySelectorAll('.needs-validation').forEach((form) => {
   });
 });
 
-// Окно подтверждения возраста 18+.
-// Ответ запоминается до закрытия вкладки (sessionStorage).
 const ageModalElement = document.getElementById('ageModal');
 
 if (ageModalElement) {
@@ -49,9 +44,7 @@ if (ageModalElement) {
   document.getElementById('age-yes').addEventListener('click', () => {
     try {
       sessionStorage.setItem('ageConfirmed', 'yes');
-    } catch (error) {
-      // Если хранилище недоступно, окно просто появится снова на следующей странице.
-    }
+    } catch (error) {}
     ageModal.hide();
   });
 
